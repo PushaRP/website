@@ -1,0 +1,38 @@
+{
+  "stand": "2026-06-30",
+  "verstoesse": [
+    { "verstoss": "Unrealistisches RP", "strafe": "2 Tage Ban", "level": 1 },
+    { "verstoss": "Cop Baiting", "strafe": "2 Tage Ban", "level": 1 },
+    { "verstoss": "FailRP", "strafe": "2 Tage Ban", "level": 1 },
+    { "verstoss": "VDM", "strafe": "3 Tage Ban", "level": 2 },
+    { "verstoss": "RDM", "strafe": "3 Tage Ban", "level": 2 },
+    { "verstoss": "Powergaming", "strafe": "3 Tage Ban", "level": 2 },
+    { "verstoss": "Metagaming", "strafe": "3 Tage Ban", "level": 2 },
+    { "verstoss": "New Life Rule (NLR)", "strafe": "3 Tage Ban", "level": 2 },
+    { "verstoss": "FearRP / Value of Life missachtet", "strafe": "3 Tage Ban", "level": 2 },
+    { "verstoss": "Green Zone Missbrauch", "strafe": "3 Tage Ban", "level": 2 },
+    { "verstoss": "Safe Zone Missbrauch", "strafe": "3 Tage Ban", "level": 2 },
+    { "verstoss": "Combat Logging", "strafe": "7 Tage Ban", "level": 3 },
+    { "verstoss": "TrollRP", "strafe": "7 Tage Ban", "level": 3 },
+    { "verstoss": "Schwere Beleidigungen", "strafe": "7 Tage Ban", "level": 3 },
+    { "verstoss": "Teambeleidigung", "strafe": "7 Tage Ban", "level": 3 },
+    { "verstoss": "Korruption als Fraktionsmitglied (ohne RP-Grund)", "strafe": "7 Tage Ban", "level": 3 },
+    { "verstoss": "Bugusing", "strafe": "14 Tage Ban", "level": 4 },
+    { "verstoss": "Exploiting", "strafe": "30 Tage Ban", "level": 4 },
+    { "verstoss": "Streamsniping", "strafe": "14 Tage Ban", "level": 4 },
+    { "verstoss": "Account Sharing", "strafe": "30 Tage Ban", "level": 4 },
+    { "verstoss": "Rassismus / Sexismus / Hassrede", "strafe": "Permanenter Ban", "level": 5 },
+    { "verstoss": "Cheating / Hacks", "strafe": "Permanenter Ban", "level": 5 },
+    { "verstoss": "Mod-Menüs", "strafe": "Permanenter Ban", "level": 5 },
+    { "verstoss": "Echtgeldhandel (RMT)", "strafe": "Permanenter Ban", "level": 5 },
+    { "verstoss": "Banumgehung", "strafe": "Permanenter Ban", "level": 5 },
+    { "verstoss": "Drohung (DDoS, Hacking etc.)", "strafe": "Permanenter Ban", "level": 5 },
+    { "verstoss": "Absichtliches Servertrolling", "strafe": "Permanenter Ban", "level": 5 }
+  ],
+  "hinweise": [
+    "Wiederholungstäter erhalten höhere Strafen.",
+    "Das Team darf je nach Situation die Strafe erhöhen oder reduzieren.",
+    "Clips, Screenshots oder Logs dienen als Beweismittel.",
+    "Bei schweren oder mehrfachen Verstößen kann direkt ein permanenter Ban ausgesprochen werden."
+  ]
+}

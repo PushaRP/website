@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAN KATALOG  PUSHA UNDERWORLD RP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=21">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+
+<div class="scanlines"></div>
+<div class="grain"></div>
+<div class="vignette"></div>
+
+<nav class="topnav">
+  <a href="index.html" class="topnav-brand">
+    <img src="logo.png" alt="Pusha Underworld RP Logo">
+    <span>PUSHA <em>UNDERWORLD RP</em></span>
+  </a>
+  <div class="topnav-links">
+    <a href="index.html">Startseite</a>
+    <a href="regelwerk.html" class="is-active">Regelwerk</a>
+    <a href="#" id="navAdminBtn">Admin</a>
+  </div>
+</nav>
+
+<div id="appContent" class="app-content">
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <img src="logo.png" alt="Pusha Underworld RP Logo" class="hero-logo">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">
+          <span class="dot"></span> PUSHA UNDERWORLD RP  BANKATALOG
+        </div>
+        <h1 class="hero-title">
+          <span>BAN</span>
+          <span class="accent" data-text="KATALOG">KATALOG</span>
+        </h1>
+        <p class="hero-sub">Jeder Verstoß. Jede Konsequenz Jede Höchststrafe wird hier aufgelistet.</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-grid" aria-hidden="true"></div>
+</header>
+
+<main class="main">
+
+  <div class="search-bar">
+    <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input id="search" type="text" placeholder="Verstoß durchsuchen — z.B. Cheating, FailRP, RDM…" autocomplete="off">
+    <span class="search-count" id="resultCount"></span>
+  </div>
+
+  <div class="admin-toolbar">
+    <button type="button" class="admin-btn primary" id="openAdminBtn">+ EINTRAG</button>
+    <button type="button" class="admin-btn" id="openManageBtn">ADMIN BEREICH</button>
+    <button type="button" class="admin-btn" id="sortByLevelBtn">NACH STERNEN SORTIEREN</button>
+  </div>
+
+  <div class="grid" id="cardGrid"></div>
+
+  <p class="empty" id="emptyState" hidden>— Keine Treffer im Register —</p>
+
+  <section class="log">
+    <h2 class="log-title">// HINWEISE.LOG</h2>
+    <ul id="hinweiseListe" class="log-list"></ul>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>STRAFREGISTER GEPFLEGT IN <code>strafen.json</code> · PUSHA UNDERWORLD RP</p>
+</footer>
+
+</div>
+
+<div class="shortcut-login" id="shortcutLogin" hidden>
+  <div class="shortcut-head">
+    <span>// ADMIN LOGIN</span>
+    <button type="button" id="shortcutCloseBtn" aria-label="Schliessen">x</button>
+  </div>
+  <label>
+    <span>Benutzer</span>
+    <input id="shortcutAdminUser" type="text" placeholder="admin" autocomplete="username">
+  </label>
+  <label>
+    <span>Passwort</span>
+    <input id="shortcutAdminPassword" type="password" placeholder="Passwort" autocomplete="current-password">
+  </label>
+  <p class="login-error" id="shortcutLoginError" hidden>Falscher Benutzer oder falsches Passwort.</p>
+  <button type="button" class="admin-btn primary" id="shortcutLoginBtn">Einloggen</button>
+</div>
+
+<div class="admin-overlay" id="adminOverlay" role="dialog" aria-modal="true" aria-label="Admin Bereich">
+  <div class="admin-modal">
+    <div class="admin-head">
+      <div>
+        <p class="admin-kicker">// COMMAND CENTER</p>
+        <h2>BAN KATALOG ADMIN</h2>
+      </div>
+      <button type="button" class="admin-close" id="closeAdminBtn" aria-label="Schliessen">x</button>
+    </div>
+
+    <div class="admin-login" id="adminLogin">
+      <div class="login-box">
+        <p class="admin-kicker">// LOGIN</p>
+        <h3>Admin Zugang</h3>
+        <label>
+          <span>Benutzer</span>
+          <input id="adminUser" type="text" placeholder="admin" autocomplete="username">
+        </label>
+        <label>
+          <span>Passwort</span>
+          <input id="adminPassword" type="password" placeholder="Passwort" autocomplete="current-password">
+        </label>
+        <p class="login-error" id="adminLoginError" hidden>Falscher Benutzer oder falsches Passwort.</p>
+        <button type="button" class="admin-btn primary" id="adminLoginBtn">Einloggen</button>
+      </div>
+    </div>
+
+    <div class="admin-dashboard" id="adminDashboard" hidden>
+      <div class="command-top">
+        <div>
+          <p class="admin-kicker">// LIVE STATUS</p>
+          <h3>Command Center</h3>
+        </div>
+        <button type="button" class="admin-btn danger" id="adminLogoutBtn">Logout</button>
+      </div>
+
+      <div class="command-grid">
+        <div class="command-card">
+          <span class="command-label">Eintraege</span>
+          <strong id="dashTotal">0</strong>
+          <small>aktive Regeln im Katalog</small>
+        </div>
+        <div class="command-card">
+          <span class="command-label">Hoechstes Level</span>
+          <strong id="dashMaxLevel">0</strong>
+          <small>maximale Stern-Stufe</small>
+        </div>
+        <div class="command-card">
+          <span class="command-label">Admin Session</span>
+          <strong id="dashSession">OFF</strong>
+          <small id="dashSessionMeta">nicht eingeloggt</small>
+        </div>
+        <div class="command-card">
+          <span class="command-label">Speicher</span>
+          <strong id="dashStorage">JSON</strong>
+          <small>lokal + Export</small>
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <button type="button" class="admin-btn primary" id="dashNewBtn">+ Neuer Eintrag</button>
+        <button type="button" class="admin-btn" id="dashExportBtn">JSON Export</button>
+        <button type="button" class="admin-btn" id="dashRestoreBtn">Wiederherstellen</button>
+        <button type="button" class="admin-btn danger" id="dashResetBtn">Reset</button>
+      </div>
+
+      <div class="security-panel">
+        <div class="admin-list-head compact">
+          <h3>Admin Passwort</h3>
+        </div>
+        <div class="password-grid">
+          <label>
+            <span>Aktuelles Passwort</span>
+            <input id="currentAdminPass" type="password" autocomplete="current-password">
+          </label>
+          <label>
+            <span>Neues Passwort</span>
+            <input id="newAdminPass" type="password" autocomplete="new-password">
+          </label>
+          <label>
+            <span>Neues Passwort wiederholen</span>
+            <input id="repeatAdminPass" type="password" autocomplete="new-password">
+          </label>
+          <button type="button" class="admin-btn primary" id="changeAdminPassBtn">Passwort ändern</button>
+        </div>
+        <p class="password-status" id="passwordStatus" hidden></p>
+      </div>
+
+      <div class="activity-panel">
+        <div class="admin-list-head compact">
+          <h3>Aktivitaetsprotokoll</h3>
+          <button type="button" class="admin-btn small" id="clearLogBtn">Log leeren</button>
+        </div>
+        <div class="activity-log" id="activityLog"></div>
+      </div>
+
+      <div class="entry-editor">
+        <div class="admin-list-head compact">
+          <h3 id="adminTitle">Eintrag bearbeiten</h3>
+        </div>
+
+    <form class="admin-form" id="entryForm">
+      <input type="hidden" id="entryIndex">
+      <label>
+        <span>Verstoss</span>
+        <input id="entryName" type="text" placeholder="z.B. FailRP" autocomplete="off" required>
+      </label>
+      <label>
+        <span>Strafe</span>
+        <input id="entryPenalty" type="text" placeholder="z.B. 3 Tage Ban" autocomplete="off" required>
+      </label>
+      <label>
+        <span>Level</span>
+        <select id="entryLevel" required>
+          <option value="1">1 Stern</option>
+          <option value="2">2 Sterne</option>
+          <option value="3">3 Sterne</option>
+          <option value="4">4 Sterne</option>
+          <option value="5">5 Sterne</option>
+        </select>
+      </label>
+      <div class="admin-actions">
+        <button type="button" class="admin-btn" id="newEntryBtn">Neu</button>
+        <button type="submit" class="admin-btn primary">Speichern</button>
+      </div>
+    </form>
+
+    <div class="admin-list-head">
+      <h3>Eintraege</h3>
+      <div>
+        <button type="button" class="admin-btn small" id="exportBtn">JSON Export</button>
+        <button type="button" class="admin-btn small" id="restoreBtn">Wiederherstellen</button>
+        <button type="button" class="admin-btn small danger" id="resetBtn">Reset</button>
+      </div>
+    </div>
+    <div class="admin-list" id="adminList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js?v=15"></script>
+</body>
+</html>
