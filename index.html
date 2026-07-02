@@ -75,10 +75,41 @@
         <div class="status-track"><div class="status-fill" id="playerCountFill"></div></div>
       </div>
     </div>
+
+    <div class="streamer-strip">
+      <p class="streamer-strip-label">📺 <strong id="streamerCount">3</strong> Streamer Live · <strong id="viewerCount">64</strong> Zuschauer <span class="status-dot"></span></p>
+      <div class="streamer-row">
+        <article class="streamer-card">
+          <div class="streamer-thumb thumb-1"><span class="live-badge">LIVE</span></div>
+          <div class="streamer-meta"><strong>Streamername</strong><span>42 Zuschauer</span></div>
+        </article>
+        <article class="streamer-card">
+          <div class="streamer-thumb thumb-2"><span class="live-badge">LIVE</span></div>
+          <div class="streamer-meta"><strong>Streamername</strong><span>18 Zuschauer</span></div>
+        </article>
+        <article class="streamer-card">
+          <div class="streamer-thumb thumb-3"><span class="live-badge">LIVE</span></div>
+          <div class="streamer-meta"><strong>Streamername</strong><span>4 Zuschauer</span></div>
+        </article>
+      </div>
+    </div>
   </div>
 </header>
 
 <main class="site-main">
+
+  <!-- ═══════════════ PROMO BANNER ═══════════════ -->
+  <section class="section promo-section">
+    <div class="promo-banner">
+      <div class="promo-visual">🎁</div>
+      <div class="promo-body">
+        <span class="promo-tag">NEU · BEWERBUNGEN OFFEN</span>
+        <h3>Werde Teil des Teams.</h3>
+        <p>Wir suchen laufend engagierte Leute fürs Admin- und Dev-Team — bring dich ein und gestalte den Underworld mit.</p>
+        <a href="#" class="cta-btn primary small">Jetzt bewerben →</a>
+      </div>
+    </div>
+  </section>
 
   <!-- ═══════════════ INFO KACHELN ═══════════════ -->
   <section class="section info-section">
@@ -186,11 +217,15 @@
     <p class="section-kicker">// COMMUNITY BILDER</p>
     <h2 class="section-title">Eindrücke aus Los Santos</h2>
     <p class="section-text">Momente aus dem Leben auf Pusha Underworld RP.</p>
-    <div class="gallery-scroll">
-      <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
-      <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
-      <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
-      <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
+    <div class="gallery-wrap">
+      <button type="button" class="gallery-arrow gallery-prev" aria-label="Zurück" onclick="document.getElementById('galleryScroll').scrollBy({left:-300,behavior:'smooth'})">‹</button>
+      <div class="gallery-scroll" id="galleryScroll">
+        <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
+        <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
+        <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
+        <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
+      </div>
+      <button type="button" class="gallery-arrow gallery-next" aria-label="Weiter" onclick="document.getElementById('galleryScroll').scrollBy({left:300,behavior:'smooth'})">›</button>
     </div>
   </section>
 
