@@ -261,7 +261,7 @@ body{
 /* ── Card grid ─────────────────────────────────────────── */
 .grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   align-items: stretch;
   grid-auto-rows: 122px;
   gap: 10px;
@@ -1039,7 +1039,7 @@ body{
   letter-spacing: .01em;
   text-shadow: 0 4px 40px rgba(0,0,0,.5);
 }
-.site-hero-title span{ display: inline-block; }
+.site-hero-title span.line{ display: block; }
 .site-hero-title .accent{
   color: var(--pink);
   text-shadow: 0 0 30px rgba(227,16,31,.6), 0 0 80px rgba(227,16,31,.3);
@@ -1162,7 +1162,7 @@ body{
 
 .feature-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
   margin-top: 8px;
 }
@@ -1199,7 +1199,7 @@ body{
 .connect-section{ border-bottom: none; }
 .connect-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 16px;
   margin-top: 28px;
 }
@@ -1508,7 +1508,9 @@ body{
   border: 1px solid var(--line);
   display: flex; align-items: center; justify-content: center;
   scroll-snap-align: start;
+  transition: border-color .2s ease, transform .2s ease;
 }
+.gallery-tile:hover{ border-color: var(--pink); transform: translateY(-3px); }
 .gallery-tile span{
   font-family: var(--mono);
   font-size: 11.5px;
@@ -1624,7 +1626,9 @@ body{
   border-radius: 14px;
   padding: 30px 34px;
   text-align: left;
+  transition: border-color .2s ease, transform .2s ease;
 }
+.promo-banner:hover{ border-color: var(--pink); transform: translateY(-2px); }
 .promo-visual{
   flex: 0 0 auto;
   width: 84px; height: 84px;
