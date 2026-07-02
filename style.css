@@ -1027,15 +1027,21 @@ body{
 }
 .site-hero-inner{ position: relative; z-index: 1; max-width: 820px; margin: 0 auto; }
 .site-hero-logo{
-  width: 156px; height: 156px;
+  width: 220px; height: 220px;
   object-fit: contain;
   margin: 0 auto 26px;
   filter: drop-shadow(0 0 40px rgba(227,16,31,.55)) drop-shadow(0 0 80px rgba(227,16,31,.25));
-  animation: logoGlow 4s ease-in-out infinite;
+  animation: logoFloat 5s ease-in-out infinite;
 }
-@keyframes logoGlow{
-  0%, 100%{ filter: drop-shadow(0 0 40px rgba(227,16,31,.55)) drop-shadow(0 0 80px rgba(227,16,31,.25)); }
-  50%{ filter: drop-shadow(0 0 56px rgba(227,16,31,.75)) drop-shadow(0 0 110px rgba(227,16,31,.4)); }
+@keyframes logoFloat{
+  0%, 100%{
+    transform: translateY(0);
+    filter: drop-shadow(0 0 40px rgba(227,16,31,.55)) drop-shadow(0 0 80px rgba(227,16,31,.25));
+  }
+  50%{
+    transform: translateY(-16px);
+    filter: drop-shadow(0 0 56px rgba(227,16,31,.75)) drop-shadow(0 0 110px rgba(227,16,31,.4));
+  }
 }
 .site-hero .hero-eyebrow{ justify-content: center; margin-bottom: 22px; }
 .site-hero-title{
