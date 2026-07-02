@@ -7,7 +7,7 @@
 <meta name="description" content="Pusha Underworld RP — GTA 5 Roleplay Server. Regelwerk, Community und Infos zum Server.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=22">
+<link rel="stylesheet" href="style.css?v=23">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -19,15 +19,25 @@
 <div class="grain"></div>
 <div class="vignette"></div>
 
+<!-- ═══════════════ NAV ═══════════════ -->
 <nav class="topnav">
   <a href="index.html" class="topnav-brand">
     <img src="logo.png" alt="Pusha Underworld RP Logo">
     <span>PUSHA <em>UNDERWORLD RP</em></span>
   </a>
   <div class="topnav-links">
-    <a href="index.html" class="is-active">Startseite</a>
+    <a href="index.html" class="is-active">Start</a>
+    <a href="#philosophie">Philosophie</a>
+    <a href="#geschichte">Geschichte</a>
     <a href="regelwerk.html">Regelwerk</a>
-    <a href="regelwerk.html#admin" id="navAdminBtnHome">Admin</a>
+    <a href="#team">Team</a>
+    <a href="impressum.html">Impressum</a>
+  </div>
+  <div class="topnav-actions">
+    <a href="#connect" class="nav-pill">
+      <span class="pill-dot"></span> <strong id="onlineCount">—</strong> ONLINE
+    </a>
+    <a href="#" class="nav-pill nav-pill-alert">🔒 ENTBANNUNG</a>
   </div>
 </nav>
 
@@ -42,61 +52,145 @@
       <span class="accent" data-text="UNDERWORLD">UNDERWORLD</span>
       <span>RP</span>
     </h1>
+    <p class="site-hero-tagline">DEINE STORY. DEINE STADT. DEINE KONSEQUENZEN.</p>
     <p class="site-hero-sub">Kein Skript-RP von der Stange. Bei uns zählt, wie du deine Story in Los Santos schreibst — Gangs, Fraktionen, Wirtschaft, echte Konsequenzen.</p>
     <div class="site-hero-cta">
-      <a href="#connect" class="cta-btn primary">Jetzt Verbinden</a>
-      <a href="regelwerk.html" class="cta-btn">Regelwerk lesen</a>
+      <a href="#" class="cta-btn primary">💬 Discord beitreten</a>
+      <a href="#" class="cta-btn">🎮 Server verbinden</a>
+    </div>
+
+    <div class="server-status-card">
+      <div class="server-status-head">
+        <img src="logo.png" alt="">
+        <div>
+          <strong>Pusha Underworld RP</strong>
+          <span class="status-live"><span class="status-dot"></span> SERVER ONLINE</span>
+        </div>
+      </div>
+      <div class="server-status-bar">
+        <div class="status-row">
+          <span>SPIELER</span>
+          <span id="playerCountLabel">128 / 256</span>
+        </div>
+        <div class="status-track"><div class="status-fill" id="playerCountFill"></div></div>
+      </div>
     </div>
   </div>
 </header>
 
 <main class="site-main">
 
-  <!-- ═══════════════ STATS STRIP ═══════════════ -->
-  <section class="stats-strip">
-    <div class="stat"><strong>24/7</strong><span>Server Online</span></div>
-    <div class="stat"><strong>Custom</strong><span>Jobs &amp; Wirtschaft</span></div>
-    <div class="stat"><strong>Live</strong><span>Aktives Admin-Team</span></div>
-    <div class="stat"><strong>Fair</strong><span>Transparentes Regelwerk</span></div>
+  <!-- ═══════════════ INFO KACHELN ═══════════════ -->
+  <section class="section info-section">
+    <div class="info-grid">
+      <article class="info-card">
+        <div class="info-card-head">
+          <span class="info-icon">📖</span>
+          <h3>Regelwerk</h3>
+        </div>
+        <p>Unser Regelwerk garantiert faires, immersives Roleplay für alle Spieler.</p>
+        <ul class="info-list">
+          <li>Ab 18 Jahren</li>
+          <li>Respektvoller Umgang ist Pflicht</li>
+          <li>Filmreifes Roleplay</li>
+          <li>0 Toleranz bei Diskriminierung</li>
+          <li>0 Toleranz bei Cheating</li>
+        </ul>
+        <a href="regelwerk.html" class="info-link">Vollständiges Regelwerk ansehen →</a>
+      </article>
+
+      <article class="info-card">
+        <div class="info-card-head">
+          <span class="info-icon">🖥</span>
+          <h3>Server Info</h3>
+        </div>
+        <p class="info-highlight">Deutschlands neue Adresse für ernsthaftes Roleplay 🇩🇪 🇦🇹 🇨🇭</p>
+        <ul class="info-list">
+          <li>Wachsende, aktive Community</li>
+          <li>Creator &amp; Streamer Programm</li>
+          <li>Eigenes Framework</li>
+          <li>Custom Kleidung &amp; Mappings</li>
+          <li>Großteils selbst entwickelt</li>
+        </ul>
+      </article>
+
+      <article class="info-card">
+        <div class="info-card-head">
+          <span class="info-icon">⬇</span>
+          <h3>Downloads</h3>
+        </div>
+        <p>Wichtige Links und Voraussetzungen für neue Spieler.</p>
+        <ul class="info-list link-list">
+          <li><a href="#">Discord</a></li>
+          <li><a href="#">TeamSpeak</a></li>
+          <li><a href="#">FiveM</a></li>
+          <li><a href="#">GTA 5</a></li>
+        </ul>
+      </article>
+    </div>
   </section>
 
-  <!-- ═══════════════ ÜBER UNS ═══════════════ -->
-  <section class="section">
-    <p class="section-kicker">// UEBER DEN SERVER</p>
-    <h2 class="section-title">Willkommen im Underworld</h2>
+  <!-- ═══════════════ PHILOSOPHIE ═══════════════ -->
+  <section class="section" id="philosophie">
+    <p class="section-kicker">// PHILOSOPHIE</p>
+    <h2 class="section-title">Wofür wir stehen</h2>
     <p class="section-text">
-      Pusha Underworld RP ist ein GTA 5 Roleplay-Server mit Fokus auf ernsthaftes, tiefgehendes Roleplay.
-      Ob als Gangmitglied, Unternehmer, Polizist oder Rettungssanitäter — bei uns bekommt jede Rolle
-      echten Einfluss auf die Stadt. Unser Team sorgt für ein faires, gut moderiertes Umfeld, in dem
-      Geschichten zählen und Regelbrüche klare Konsequenzen haben.
+      Bei Pusha Underworld RP steht die Geschichte im Mittelpunkt — nicht der schnellste Loot oder die
+      lauteste Aktion. Wir bauen an einer Stadt, in der Entscheidungen Gewicht haben und Rollenspiel
+      Vorrang vor reinem Gameplay hat. Unser Team moderiert konsequent, aber fair, damit sich jeder
+      Spieler auf ein respektvolles, glaubwürdiges Umfeld verlassen kann.
     </p>
   </section>
 
-  <!-- ═══════════════ FEATURES ═══════════════ -->
-  <section class="section">
-    <p class="section-kicker">// WAS UNS AUSMACHT</p>
-    <h2 class="section-title">Features</h2>
-    <div class="feature-grid">
-      <article class="feature-card">
-        <div class="feature-icon">★</div>
-        <h3>Eigene Fraktionen</h3>
-        <p>Gangs, Polizei, EMS und Unternehmen mit echter Struktur und Einfluss auf die Stadt.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon">★</div>
-        <h3>Custom Economy</h3>
-        <p>Eigene Jobs, Immobilien und Wirtschaftssystem — dein Aufstieg liegt in deiner Hand.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon">★</div>
-        <h3>Aktives Team</h3>
-        <p>Erfahrene Admins und Moderatoren sorgen für faires, konsequentes Roleplay.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon">★</div>
-        <h3>Klares Regelwerk</h3>
-        <p>Transparente Regeln mit nachvollziehbaren Strafen — für alle gleich, jederzeit einsehbar.</p>
-      </article>
+  <!-- ═══════════════ GESCHICHTE ═══════════════ -->
+  <section class="section" id="geschichte">
+    <p class="section-kicker">// GESCHICHTE</p>
+    <h2 class="section-title">Wie alles begann</h2>
+    <p class="section-text">
+      Pusha Underworld RP entstand aus dem Wunsch, einen Server zu schaffen, der Roleplay wieder
+      ernst nimmt. Aus einer kleinen Gruppe von Freunden mit einer Vision wurde eine wachsende
+      Community, die gemeinsam an der Stadt Los Santos schreibt — Update für Update, Story für Story.
+    </p>
+  </section>
+
+  <!-- ═══════════════ TEAM ═══════════════ -->
+  <section class="section" id="team">
+    <p class="section-kicker">// DAS TEAM</p>
+    <h2 class="section-title">Wer hinter dem Server steht</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">👑</div>
+        <strong>Projektleitung</strong>
+        <span>Konzept &amp; Serverleitung</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🛡</div>
+        <strong>Admin-Team</strong>
+        <span>Moderation &amp; Support</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🛠</div>
+        <strong>Development</strong>
+        <span>Scripts &amp; Framework</span>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🎨</div>
+        <strong>Design</strong>
+        <span>Mappings &amp; Kleidung</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ COMMUNITY GALERIE ═══════════════ -->
+  <section class="section gallery-section">
+    <p class="section-kicker">// COMMUNITY BILDER</p>
+    <h2 class="section-title">Eindrücke aus Los Santos</h2>
+    <p class="section-text">Momente aus dem Leben auf Pusha Underworld RP.</p>
+    <div class="gallery-scroll">
+      <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
+      <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
+      <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
+      <div class="gallery-tile"><span>Screenshot hinzufügen</span></div>
     </div>
   </section>
 
@@ -131,9 +225,16 @@
   <p>PUSHA UNDERWORLD RP · LOS SANTOS ROLEPLAY</p>
   <div class="footer-links">
     <a href="regelwerk.html">Regelwerk</a>
+    <a href="impressum.html">Impressum</a>
     <a href="#connect">Discord</a>
   </div>
 </footer>
+
+<script>
+  // Platzhalter-Zahlen -- hier spaeter echte Server-Werte eintragen/anbinden.
+  document.getElementById('onlineCount').textContent = '128';
+  document.getElementById('playerCountFill').style.width = '50%';
+</script>
 
 </body>
 </html>
